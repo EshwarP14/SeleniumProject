@@ -16,6 +16,11 @@ public class DropdownLinksURL {
 
 	public static void main(String[] args) {
 		
+		/*
+		 * 
+		 * Testing Dropdown and Links with URL
+		 */
+		
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.wikipedia.org/");
