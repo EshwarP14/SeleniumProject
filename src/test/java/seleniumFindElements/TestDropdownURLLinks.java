@@ -1,6 +1,8 @@
 package seleniumFindElements;
 
 
+
+
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -12,14 +14,9 @@ import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class DropdownLinksURL {
+public class TestDropdownURLLinks {
 
 	public static void main(String[] args) {
-		
-		/*
-		 * 
-		 * Testing Dropdown and Links with URL
-		 */
 		
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
@@ -27,37 +24,31 @@ public class DropdownLinksURL {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
-		WebElement dropdown =  driver.findElement(By.id("searchLanguage"));
+		WebElement dropdown = driver.findElement(By.id("searchLanguage"));
 		Select select = new Select(dropdown);
 		select.selectByValue("hi");
 		
 		List<WebElement> values = driver.findElements(By.tagName("option"));
-		System.out.println("total values : "+values.size());
-		System.out.println(values.get(7).getText());
+		System.out.println("Total Values are :" +values.size());
+		System.out.println(values.get(7));
 		
-		for(int i=0 ; i<values.size();i++)
+		for (int i= 0 ; i<values.size();i++)
 		{
-			System.out.println(values.get(i).getAttribute("lang"));
+			System.out.println("list of values: "+ values.get(i).getAttribute("lang"));
 		}
 		
 		List<WebElement> links = driver.findElements(By.tagName("a"));
-		System.out.println(links.size());
+		System.out.println("No of Links are: "+links.size());
 		
 		for(WebElement link : links)
 		{
-			
-			System.out.println("links are  " +link.getText() +" URL is  " +link.getAttribute("href"));
+			System.out.println("list of Text :"+link.getText()+"List of URL: "+link.getAttribute("href"));
 		}
 		
 		
-		List<WebElement> block = driver.findElements(By.tagName("option"));
 		
-		for(int j=0 ; j<block.size();j++) {
-			
-			System.out.println("display only block elements : " +block.get(j).getAttribute("lang"));
-		}
+		
+
 	}
-	
-	
 
 }
