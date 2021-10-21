@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [testNG Suite]">
+  <test thread-count="5" name="Assertion Test(failed)">
+    <classes>
+      <class name="testNGFrameWorkBasics.TestCase2Assertions">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="validateTitles"/>
+        </methods>
+      </class> <!-- testNGFrameWorkBasics.TestCase2Assertions -->
+    </classes>
+  </test> <!-- Assertion Test(failed) -->
+  <test thread-count="5" name="Soft Assertion Test(failed)">
+    <classes>
+      <class name="testNGFrameWorkBasics.TestCase3SoftAssertions">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="validateTitles"/>
+        </methods>
+      </class> <!-- testNGFrameWorkBasics.TestCase3SoftAssertions -->
+    </classes>
+  </test> <!-- Soft Assertion Test(failed) -->
+  <test thread-count="5" name="Skip Test(failed)">
+    <classes>
+      <class name="testNGFrameWorkBasics.TestSkip">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="isSkip"/>
+        </methods>
+      </class> <!-- testNGFrameWorkBasics.TestSkip -->
+    </classes>
+  </test> <!-- Skip Test(failed) -->
+</suite> <!-- Failed suite [testNG Suite] -->

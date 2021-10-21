@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="testNG Suite">
+
+
+	<test name="Login Test">
+		<classes>
+			<class name="testNGFrameWorkBasics.TestCase1" />
+
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Assertion Test">
+		<classes>
+			<class name="testNGFrameWorkBasics.TestCase2Assertions" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Soft Assertion Test">
+		<classes>
+
+			<class name="testNGFrameWorkBasics.TestCase3SoftAssertions" />
+
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Failure Test">
+		<classes>
+
+			<class name="testNGFrameWorkBasics.TestFailure" />
+
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Skip Test">
+		<classes>
+
+			<class name="testNGFrameWorkBasics.TestSkip" />
+
+		</classes>
+	</test> <!-- Test -->
+
+	
+
+</suite> <!-- Suite -->
